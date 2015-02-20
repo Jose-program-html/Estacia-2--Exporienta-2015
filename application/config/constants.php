@@ -1,4 +1,9 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php  
+	
+if ( ! defined('BASEPATH')) {
+	exit('No direct script access allowed');
+}
+
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +40,13 @@ define('FOPEN_WRITE_CREATE',					'ab');
 define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
+
+define('URL', 'assets/');
+define('IMG', URL . 'img/');
+define('CSS', URL . 'css/');
+define('JS', URL . 'js/');
+define('FOUND', URL . 'api/foundation/');
+
 
 
 /* End of file constants.php */

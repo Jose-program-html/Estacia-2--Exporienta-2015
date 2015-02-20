@@ -14,7 +14,15 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$ark_root = "http://" . $_SERVER['HTTP_HOST'];
+$ark_root = "http://localhost";
+$ark_root .= str_replace(basename($_SERVER['SCRIPT_NAME']), "", $_SERVER['SCRIPT_NAME']);
+$config['base_url'] = $ark_root;
+
+
+define('HTTP_CSS_PATH', $config['base_url'] . 'assets/css/');
+define('HTTP_IMAGES_PATH', $config['base_url'] . 'assets/images/');
+define('HTTP_JS_PATH', $config['base_url'] . 'assets/js/');
 
 /*
 |--------------------------------------------------------------------------
@@ -26,7 +34,7 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = 'index.php?';
 
 /*
 |--------------------------------------------------------------------------
